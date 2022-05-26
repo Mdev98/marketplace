@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>
+                    <a href="./index.html">Jardin-Maraicher</a>
+                </h1>
+            </div>
+            <div class="authentication">
+                <span class="auth-option registration">Inscription</span>
+                <span class="auth-option login">Connexion</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 style="font-weight: 300; text-align:center">Votre Panier</h1>
+
+        <section class="cart">
+            <nav class="cart-nav">
+                <button class="cart_btn cart_btn_L"><a href="./index.html">Retour au marché</a></button>
+                <button class="cart_btn cart_btn_R">Acheter maintenant</button>
+            </nav>
+            <div class="container">
+                <div class="cart-details">
+                    <div class="cart-product">
+                        <img src="./images/apple.png" alt="" class="cart-product_img">
+                        <div class="cart-product_info">
+                            <span class="cartInfo-productId"><b>ID:</b> 617ac32740a0974136e3c241</span>
+                            <span class="cartInfo-productName"><b>Produit:</b> Pomme</span>
+                            <span class="cartInfo-productQuantity"><b>Quantity:</b> 10 kilos</span>
+                            <span class="cartInfo-productOwner"><b>Fournisseur:</b> Gojo-fruits</span>
+                        </div>
+                    </div>
+                    <div class="cart-amount">
+                        <h3>7000</h3><span class="currency">CFA</span>
+                    </div>
+                </div>
+                <div class="cart-summary">
+                    <h1> Resumé Commande</h1>
+                    <div class="cart-summary-detail">
+                        <span class="cart-summary-detail_text">Livraison : </span>
+                        <span class="cart-summary-detail_price">2000 FCFA</span>
+                    </div>
+                    <div class="cart-summary-detail">
+                        <span class="cart-summary-detail_text">Montant Total : </span>
+                        <span class="cart-summary-detail_price">9000 FCFA</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="newsletter">
+            <h2 class="title">Newsletter</h2>
+            <p class="desc">Recevez des notifications sur vos produits favoris</p>
+            <div class="form-container">
+                <input type="text" placeholder="Ton email">
+                <button>
+                    <img src="./images/mail.png" alt="">
+                </button>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
