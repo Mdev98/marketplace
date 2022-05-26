@@ -68,6 +68,85 @@
             </div>
         </section>
     </footer>
+    <script>
+        const products = [
+            {
+                
+                "name" : "Carotte",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/carrot.png"
+            },
+            {
+                
+                "name" : "Chou",
+                "categorie": "legumes",
+                "price" : 400,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/cabbage.png"
+            },
+            {
+                
+                "name" : "Oignon",
+                "categorie": "legumes",
+                "price" : 500,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/oignon.png"
+            },
+            {
+                
+                "name" : "Aubergine",
+                "categorie": "legumes",
+                "price" : 250,
+                "supplier": "Ninja-Vegetables",
+                "imgUrl" : "./images/eggplant.png"
+            },
+            {
+                
+                "name" : "Orange",
+                "categorie": "fruits",
+                "price" : 600,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/orange.png"
+            },
+            {
+                
+                "name" : "Pomme",
+                "categorie": "fruits",
+                "price" : 700,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/apple.png"
+            },
+            {
+                
+                "name" : "Banane",
+                "categorie": "fruits",
+                "price" : 500,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/banana.png"
+            },
+            {
+                
+                "name" : "Ananas",
+                "categorie": "fruits",
+                "price" : 900,
+                "supplier": "Gojo-fruits",
+                "imgUrl" : "./images/pineapple.png"
+            }
+        ]
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const item = urlParams.get('item')
+
+        currentProduct = products.find(product => product.name == item)
+        document.querySelector('.product-details_name').innerText = currentProduct.name
+        document.querySelector('.product-details_supplier').innerText = `De ${currentProduct.supplier}`
+        document.querySelector('.product-details_price').innerText = `${currentProduct.price} FCFA`
+        document.querySelector('img').src = currentProduct.imgUrl
+        document.querySelector('#details a').setAttribute("href", `./cart.html?item=${currentProduct.name}`)
+    </script>
 </body>
 
 </html>

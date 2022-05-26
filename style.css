@@ -11,6 +11,8 @@ a {
     text-decoration: none;
 }
 
+
+
 /* ================== */
 /* ===== HEADER ===== */
 /* ================== */
@@ -193,7 +195,7 @@ header nav {
 
 .product-image {
     max-width: 100%;
-    height: auto;
+    height: 350px;
 }
 
 .product-card-info {
@@ -285,6 +287,14 @@ button img {
     padding: 50px;
     display: flex;
     align-items: center;
+}
+
+.product-D {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
 }
 
 .product-details {
