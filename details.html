@@ -136,6 +136,10 @@
             }
         ]
 
+        const select = document.querySelector('select')
+        let kilos = 1
+
+        
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const item = urlParams.get('item')
@@ -145,7 +149,15 @@
         document.querySelector('.product-details_supplier').innerText = `De ${currentProduct.supplier}`
         document.querySelector('.product-details_price').innerText = `${currentProduct.price} FCFA`
         document.querySelector('img').src = currentProduct.imgUrl
-        document.querySelector('#details a').setAttribute("href", `./cart.html?item=${currentProduct.name}`)
+        select.addEventListener('change', (e) => {
+            kilos = e.target.value
+            document.querySelector('#details a').setAttribute("href", `./cart.html?item=${currentProduct.name}&kilos=${kilos}`)
+        })
+
+        document.querySelector('#details a').setAttribute("href", `./cart.html?item=${currentProduct.name}&kilos=${kilos}`)
+        
+        
+
     </script>
 </body>
 
