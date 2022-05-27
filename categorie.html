@@ -217,7 +217,10 @@
                 item.querySelector('.product-name').innerText = fruits[i].name
                 item.querySelector('.int').innerText = fruits[i].price
                 item.querySelector('.product-supplier').innerText = fruits[i].supplier
-                console.log(fruits[i])
+                let links = item.querySelectorAll('a')
+                links.forEach(link => {
+                    link.setAttribute("href", `./details.html?item=${fruits[i].name}`);
+                })
             })
         }else {
             card.forEach((item,i) => {
@@ -225,6 +228,10 @@
                 item.querySelector('.product-name').innerText = vegetables[i].name
                 item.querySelector('.int').innerText = vegetables[i].price
                 item.querySelector('.product-supplier').innerText = vegetables[i].supplier
+                let links = item.querySelectorAll('a')
+                links.forEach(link => {
+                    link.setAttribute("href", `./details.html?item=${vegetables[i].name}`);
+                })
             })
         }
 
